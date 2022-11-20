@@ -1,19 +1,14 @@
 import React, { useEffect,useRef } from 'react';
 import * as echarts from 'echarts';
 const px = (n) => n / 2420 * (window as any).pageWidth;
-
+import {baseEchartOptions} from '../shared/base-echart-options';
 
 export const Chart1 =()=>{
     const divRef = useRef(null);
     useEffect(() => {
       var myChart = echarts.init(divRef.current);
       myChart.setOption({
-        textStyle: {
-          fontSize: px(12),
-          color: '#79839E'
-        },
-        title: {show: false},
-        legend: {show: false},
+ ...baseEchartOptions, 
         xAxis: {
           data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
           axisTick: {show: false},//去掉数轴上的尖尖
@@ -33,12 +28,7 @@ export const Chart1 =()=>{
             }
           },
         },
-        grid: {
-          x: px(40),
-          y: px(40),
-          x2: px(40),
-          y2: px(40),
-        },
+    
         yAxis: {
           splitLine: {show: false},
           axisLine: {
