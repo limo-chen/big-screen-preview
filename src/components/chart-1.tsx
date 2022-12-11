@@ -10,7 +10,7 @@ export const Chart1 =()=>{
       myChart.setOption({
  ...baseEchartOptions, 
         xAxis: {
-          data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
+          data: ['扶风区', '都城区', '古溪区', '临安区', '蓝皋区', '中余县', '新区屯县', '机场县', '新开发区'],
           axisTick: {show: false},//去掉数轴上的尖尖
           axisLine: {
             lineStyle: {color: '#083B70'}
@@ -47,7 +47,7 @@ export const Chart1 =()=>{
     }, []);
     return(
         <div className=" bordered 管辖统计">
-        <h2>案发派出所管辖统计</h2>
+        <h2>地区确诊人数统计</h2>
         <div ref={divRef} className='chart'>
     
         </div>
